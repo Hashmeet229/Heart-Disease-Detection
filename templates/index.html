@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class = "heart">Heart Disease Classification</h2>
+   <div class="container">
+        <div class="myform">
+            <form action='/predict' method="post" class="col s12">
+              <div class="form-group">
+                      <label for="size">Age</label>
+                      <input type="text" class="form-control" name="Age">
+              </div>
+                <div class="form-group">
+                      <label for="size">Sex</label>
+                      <input type="text" class="form-control" name="Sex">
+              </div>
+                <div class="form-group">
+                      <label for="size">Chest Pain Type(CP)</label>
+                      <input type="text" class="form-control" name="Chest Pain Type(CP)">
+              </div>
+              <div class="form-group">
+                      <label for="size">Resting Blood Pressure</label>
+                      <input type="text" class="form-control" name="Resting Blood Pressure">
+              </div>
+                <div class="form-group">
+                      <label for="size">Serum Cholestoral</label>
+                      <input type="text" class="form-control" name="Serum Cholestoral">
+              </div>
+                <div class="form-group">
+                      <label for="size">Fasting Blood Sugar</label>
+                      <input type="text" class="form-control" name="Fasting Blood Sugar">
+              </div>
+                <div class="form-group">
+                      <label for="size">Resting Electrocardiographic</label>
+                      <input type="text" class="form-control" name="Resting Electrocardiographic">
+              </div>
+                <div class="form-group">
+                      <label for="size">thalach(Maximum Heart Rate Achieved)</label>
+                      <input type="text" class="form-control" name="thalach(Maximum Heart Rate Achieved)">
+              </div>
+                <div class="form-group">
+                      <label for="size">Exercise induced Angina</label>
+                      <input type="text" class="form-control" name="Exercise induced Angina">
+                </div>
+        </div>
+   </div>
+  </div>
+      <h3>{{prediction_text}}</h3>
+  {% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Heart Disease Classification{% endblock title %}
+{% block content %}
+
+    <h2 class = "para ">Please Enter the fields below to check whether you are likely to have Heart disease or not</h2>
+
+<div class="center" >
+    <p id = "require">All feilds are required:-</p>
+
+    <form action="/predict", method = "post" autocomplete="off" required>
+        <p><input type="text" name="Age" placeholder="Age (in years)" required ></p>
+        <p><input type="text" name="Sex" placeholder="Sex (Enter 1 for Male and 0 for Female)" ></p>
+        <p><input type="text" name="Chest Pain Type(CP)" placeholder="Chest Pain Type (Enter 0 for no pain otherwise 1)" required></p>
+        <p><input type="text" name="Resting Blood Pressure" placeholder="Resting Blood Pressure (in mm Hg)" required ></p>
+        <p><input type="text" name="Serum Cholestoral" placeholder="Serum Cholestoral (in mg/dl)" required ></p>
+        <p><input type="text" name="Fasting Blood Sugar" placeholder="Fasting Blood Sugar > 120 mg/dl (Enter 1 if greater than 120 otherwise 0)" required ></p>
+        <p><input type="text" name="Resting Electrocardiographic Results"  placeholder="Resting Electrocardiographic Results (Enter 1 for Normal results otherwise 0) " required></p>
+        <p><input type="text" name="Maximum Heart Rate Achieved during ECG " placeholder="Max Heart Rate"  required ></p>
+        <p><input type="text" name="Chest Pain during exercise" placeholder="Chest Pain during exercise (Enter 1 for Yes and 0 for No)"  required ></p>
+        <p><input class = "button" type=  "submit" value= PREDICT ></p>
+        <br><br>
+    <p id ="output">{{pred}}</p>
+    </form>
+</div>
+<div class= "custom-center">
+    <a href="" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Vew source code</a>
+</div>
+{% endblock content %}
